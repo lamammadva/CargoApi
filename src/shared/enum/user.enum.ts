@@ -6,7 +6,7 @@ export enum UserGender{
 export enum UserRole{
     ADMIN = "admin",
     USER = "user",
-    SUPER_ADMIN = "super"
+    SUPER_ADMIN = "superuser"
 }
 
 export enum PhonePrefix{

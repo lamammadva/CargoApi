@@ -1,8 +1,8 @@
 import { Module } from "@nestjs/common";
 import { CorsService } from "./cors.service";
-import { CorsEntity } from "src/database/entity/Cors.entity";
 import { TypeOrmModule } from "@nestjs/typeorm";
 import { CorsConroller } from "./cors.controller";
+import { CorsEntity } from "src/database/entity/Cors.entity";
 
 @Module({
     imports:[TypeOrmModule.forFeature([CorsEntity])],

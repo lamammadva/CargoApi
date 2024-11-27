@@ -7,51 +7,46 @@ export class CreateCorsDto{
     @ApiProperty()
     @IsString()
     @IsOptional()
-    logo:string
+    logo?:string
 
     @Type()
     @ApiProperty()
     @IsString()
     @IsOptional()
-    sitename:string
+    sitename?:string
 
     @Type()
-    @ApiProperty()
     @IsString()
-    @IsOptional()
-    aboutus:string
-
-    @Type()
     @ApiProperty()
-    @IsString()
     @IsOptional()
-    address:string
+    phone?:string
 
 
     @Type()
-    @ApiProperty()
     @IsString()
+    @ApiProperty()
     @IsOptional()
-    phoneNumber:string
+    address?:string
+
 
     @Type()
-    @ApiProperty()
     @IsString()
+    @ApiProperty()
     @IsOptional()
-    email:string
+    workHours?:string
+
+
 
     @Type()
-    @ApiProperty()
     @IsString()
-    @IsOptional()
-    weekdayHours:string
-
-    @Type()
     @ApiProperty()
-    @IsString()
     @IsOptional()
-    saturdayHours:string
+    email?:string
 
+
+  
+
+   
     
 
 

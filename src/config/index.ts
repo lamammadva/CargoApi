@@ -13,5 +13,10 @@ export default {
         pass:process.env.DATABASE_PASSWORD
     },
     url:process.env.URL,
-    jwt:process.env.JWT_SECRET
+    jwt:process.env.JWT_SECRET,
+    redis:{
+        host:process.env.REDIS_HOST,
+        port:+process.env.REDIS_PORT
+
+    }
 } 

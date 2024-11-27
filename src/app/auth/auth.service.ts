@@ -18,6 +18,8 @@ import { ForgetPasswordDto } from './dto/ForgetPassword.dto';
 import * as crypto from 'crypto'
 import config from 'src/config';
 import { ResetPasswordDto } from './dto/resetPassword.dto';
+import { UserRole } from 'src/shared/enum/user.enum';
+
 @Injectable()
 export class AuthService {
   constructor(
@@ -27,7 +29,7 @@ export class AuthService {
     private cls: ClsService,
   ) {}
   async register(body: RegisterDto) {
-    const user = await this.userService.create(body);
+    const user = await this.userService.create({...body,role:[UserRole.USER]});
     this.mailerService.sendMail({
       to: user.email,
       from: 'lamanb.memmedova@gmail.com',
@@ -46,7 +48,6 @@ export class AuthService {
       throw new HttpException('Email is wrong', HttpStatus.BAD_REQUEST);
     }
     const password = await bcrypt.compare(body.password, user.password);
-    console.log(password);
 
     if (!password) {
       throw new HttpException('Passowrd is wrong ', HttpStatus.BAD_REQUEST);
@@ -137,5 +138,6 @@ export class AuthService {
 
 
   }
+ 
 
 }

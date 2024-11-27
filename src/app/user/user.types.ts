@@ -10,6 +10,14 @@ export const SELECTUSERFIELD:FindOptionsSelect<UserEntity> = {
     birth:true,
     gender:true,
     address:true,
-
+    svSerialNo:true,
+    finnishcode:true,
+    nationality:true,
+    customerCode:true,
+    shippingBalance :true,
+    orderBalance: true,
+    office:true,
+    role:true,
+    
 
 }

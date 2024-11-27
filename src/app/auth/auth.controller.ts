@@ -1,4 +1,4 @@
-import { Body, Controller, Post, Put, UseGuards } from "@nestjs/common";
+import { Body, Controller, Param, Post, Put, UseGuards } from "@nestjs/common";
 import { ApiBearerAuth, ApiTags } from "@nestjs/swagger";
 import { AuthService } from "./auth.service";
 import { RegisterDto } from "./dto/register.dto";
@@ -46,4 +46,7 @@ export class AuthController{
         return this.authService.resetPassword(body)
 
     }
+
+
+
 }
